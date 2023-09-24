@@ -1,0 +1,12 @@
+<ng-template #startDialog>
+    <h2>Spielmodus</h2>
+    <mat-dialog-content>
+        <mat-button-toggle-group #group="matButtonToggleGroup">
+            <mat-button-toggle value="boxes">Feste Punktzahl</mat-button-toggle>
+            <mat-button-toggle value="counter">Variable Punktzahl</mat-button-toggle>
+        </mat-button-toggle-group>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button matDialogClose color="primary">Weiter</button>
+    </mat-dialog-actions>
+</ng-template>

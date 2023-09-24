@@ -1,9 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
 import { BoxesComponent } from './boxes/boxes.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -12,8 +14,9 @@ import { BoxesComponent } from './boxes/boxes.component';
     BoxesComponent
   ],
   imports: [
-    BrowserModule
-    //MatButtonModule
+    BrowserModule,
+    MatDialogModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
