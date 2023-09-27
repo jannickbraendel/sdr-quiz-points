@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-boxes',
+  selector: 'boxes',
   templateUrl: './boxes.component.html',
   styleUrls: ['./boxes.component.css']
 })

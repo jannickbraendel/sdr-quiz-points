@@ -1,0 +1,34 @@
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+mat-dialog-content {
+    background-color: rgb(42, 92, 130)
+}
+
+mat-button-toggle-group {
+    left: 11%;
+
+}
+
+.mat-button-toggle {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: orange;
+    border-style: solid;
+}
+
+.mat-button-toggle:hover {
+    background-color: orange;
+    color: white !important;
+    border-style: solid;
+    border-color: darkorange;
+}
+
+.mat-button-toggle-checked {
+    background-color: orange !important;
+    border-style: solid;
+    border-color: darkorange;
+
+}

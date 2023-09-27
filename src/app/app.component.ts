@@ -13,8 +13,27 @@ export class AppComponent {
 
   @ViewChild('startDialog', { read: TemplateRef, static: true }) startDialog: TemplateRef<any>;
 
+  boxCounter = false;
+  loadComponent = false;
+
   ngOnInit(): void {
     console.log('OnInit!');
-    this.dialog.open(this.startDialog);
+    this.dialog.open(this.startDialog, {
+      width: '500px',
+      position: { top: '200px', left: '40%' }
+    });
+  }
+
+  loadCounter(): void {
+    this.loadComponent = true;
+  }
+
+  onToggleChange(value: String) {
+    console.log(value)
+    if (value == "boxes") {
+      this.boxCounter = true;
+    } else {
+      this.boxCounter = false;
+    }
   }
 }
