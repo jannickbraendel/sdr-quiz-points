@@ -1,1 +1,24 @@
-<p>boxes works!</p>
+<div>
+    <div class="split left">
+
+    </div>
+
+    <div class="split right">
+
+    </div>
+</div>
+
+<ng-template #boxDialog>
+    <h2>Punktzahl</h2>
+    <mat-dialog-content>
+        <label>Höchstpunktzahl zum Gewinnen des Quizzes:</label>
+        <mat-form-field formControlName="numberForm">
+            <mat-label>Zahl eingeben</mat-label>
+            <input #input matInput placeholder="0">
+        </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button type="submit" (click)="loadBoxes(input.value)" mat-raised-button matDialogClose
+            color="accent">Go!</button>
+    </mat-dialog-actions>
+</ng-template>
