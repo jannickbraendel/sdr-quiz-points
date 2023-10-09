@@ -6,9 +6,7 @@ import { CounterComponent } from './counter/counter.component';
 import { BoxesComponent } from './boxes/boxes.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInput, MatInputModule } from '@angular/material/input';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field'
 
 @NgModule({
   declarations: [
@@ -20,10 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     MatDialogModule,
     MatButtonToggleModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    ReactiveFormsModule
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
