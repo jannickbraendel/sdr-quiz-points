@@ -1,0 +1,56 @@
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    z-index: 1;
+}
+
+/* Control the left side */
+.left {
+    left: 0;
+    background-color: rgb(61, 61, 220) !important;
+    border-right-width: 4px;
+    z-index: 1;
+}
+
+/* Control the right side */
+.right {
+    right: 0;
+    background-color: rgb(222, 19, 19) !important;
+    border-left-width: 4px;
+    z-index: 1;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.boxButton {
+    max-width: 10%;
+    max-height: 20%;
+}
+
+#box-image-empty {
+    max-width: 20%;
+    max-height: 20%;
+}
+
+#box-image-full {
+    max-width: inherit;
+    max-height: inherit;
+    background-color: gold;
+    border-width: 20px;
+}

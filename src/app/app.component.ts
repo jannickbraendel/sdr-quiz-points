@@ -15,6 +15,7 @@ export class AppComponent {
 
   boxCounter = false;
   loadComponent = false;
+  boxAmount = 0;
 
   ngOnInit(): void {
     console.log('OnInit!');
@@ -35,5 +36,9 @@ export class AppComponent {
     } else {
       this.boxCounter = false;
     }
+  }
+
+  boxAmountChanged(event) {
+    this.boxAmount = event.target.value;
   }
 }

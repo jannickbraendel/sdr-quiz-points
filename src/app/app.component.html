@@ -6,6 +6,10 @@
             <mat-button-toggle value="counter" (change)="onToggleChange($event.value)">Variable
                 Punktzahl</mat-button-toggle>
         </mat-button-toggle-group>
+        <div *ngIf="group.value == 'boxes'">
+            Max. erreichbare Punktzahl:
+            <input (input)="boxAmountChanged($event)" placeholder="Punktzahl">
+        </div>
     </mat-dialog-content>
     <mat-dialog-actions align="center">
         <button type="submit" (click)="loadCounter()" mat-raised-button matDialogClose color="accent">Weiter</button>
@@ -15,5 +19,5 @@
     <counter></counter>
 </div>
 <div *ngIf="this.loadComponent && this.boxCounter">
-    <boxes></boxes>
+    <boxes [boxAmount]="this.boxAmount"></boxes>
 </div>

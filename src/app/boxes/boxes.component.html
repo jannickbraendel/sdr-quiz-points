@@ -1,1 +1,22 @@
-<p>boxes works!</p>
+<div class="split left">
+    <div class="centered">
+        <ng-container *ngFor="let box of this.boxFilledArray; index as i">
+            <button class="boxButton" (click)="switchBoxState(i)">
+                <ng-container *ngIf="this.boxFilledArray[i] then boxFull else boxEmpty"></ng-container>
+            </button>
+        </ng-container>
+    </div>
+</div>
+<div class="split right">
+    <div class="centered">
+
+    </div>
+</div>
+
+<ng-template #boxEmpty>
+    <img src="assets/square.png" id="box-image-empty">
+</ng-template>
+
+<ng-template #boxFull>
+    <img src="assets/square.png" id="box-image-full">
+</ng-template>
