@@ -13,10 +13,17 @@
     </div>
 </div>
 
-<ng-template #boxEmpty>
-    <img src="assets/square.png" id="box-image-empty">
-</ng-template>
-
-<ng-template #boxFull>
-    <img src="assets/square.png" id="box-image-full">
+<ng-template #boxDialog>
+    <h2>Punktzahl</h2>
+    <mat-dialog-content>
+        <label>Höchstpunktzahl zum Gewinnen des Quizzes:</label>
+        <mat-form-field formControlName="numberForm">
+            <mat-label>Zahl eingeben</mat-label>
+            <input #input matInput placeholder="0">
+        </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button type="submit" (click)="loadBoxes(input.value)" mat-raised-button matDialogClose
+            color="accent">Go!</button>
+    </mat-dialog-actions>
 </ng-template>
