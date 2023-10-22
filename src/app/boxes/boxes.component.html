@@ -1,15 +1,19 @@
 <div class="split left">
     <div class="centered">
-        <ng-container *ngFor="let box of this.boxFilledArray; index as i">
-            <button class="boxButton" (click)="switchBoxState(i)">
-                <ng-container *ngIf="this.boxFilledArray[i] then boxFull else boxEmpty"></ng-container>
+        <ng-container *ngFor="let box of this.boxFilledArrayLeft; index as i">
+            <button class="boxButtonLeft" (click)="switchBoxState('left', i)">
+                <ng-container *ngIf="this.boxFilledArrayLeft[i] then boxFull else boxEmpty"></ng-container>
             </button>
         </ng-container>
     </div>
 </div>
 <div class="split right">
     <div class="centered">
-
+        <ng-container *ngFor="let box of this.boxFilledArrayRight; index as i">
+            <button class="boxButtonRight" (click)="switchBoxState('right', i)">
+                <ng-container *ngIf="this.boxFilledArrayRight[i] then boxFull else boxEmpty"></ng-container>
+            </button>
+        </ng-container>
     </div>
 </div>
 

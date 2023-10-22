@@ -7,7 +7,8 @@ import { Component, ViewChild, TemplateRef, OnInit, Input } from '@angular/core'
 })
 export class BoxesComponent {
 
-  boxFilledArray;
+  boxFilledArrayLeft;
+  boxFilledArrayRight;
 
   //between 1 and 9
   @Input('boxAmount') boxAmount = 1;
@@ -18,19 +19,30 @@ export class BoxesComponent {
   }
 
   initBoxArray(): void {
-    this.boxFilledArray = new Array();
+    this.boxFilledArrayLeft = new Array();
+    this.boxFilledArrayRight = new Array();
     for (let i = 0; i < this.boxAmount; i++) {
-      this.boxFilledArray.push(false);
+      this.boxFilledArrayLeft.push(false);
+      this.boxFilledArrayRight.push(false);
     }
-    console.log(this.boxFilledArray);
+    //console.log(this.boxFilledArrayLeft);
   }
 
-  switchBoxState(index: number): void {
-    if (this.boxFilledArray[index]) {
-      this.boxFilledArray[index] = false;
+  switchBoxState(side: string, index: number): void {
+
+    if (side == 'left') {
+      if (this.boxFilledArrayLeft[index]) {
+        this.boxFilledArrayLeft[index] = false;
+      } else {
+        this.boxFilledArrayLeft[index] = true;
+      }
     } else {
-      this.boxFilledArray[index] = true;
+      if (this.boxFilledArrayRight[index]) {
+        this.boxFilledArrayRight[index] = false;
+      } else {
+        this.boxFilledArrayRight[index] = true;
+      }
     }
-    console.log(this.boxFilledArray);
+
   }
 }
