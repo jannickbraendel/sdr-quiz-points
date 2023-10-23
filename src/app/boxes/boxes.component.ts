@@ -1,8 +1,4 @@
-import { Component, ViewChild, TemplateRef } from '@angular/core';
-import { MatInputModule } from '@angular/material/input'
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, ViewChild, TemplateRef, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'boxes',
@@ -11,18 +7,42 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class BoxesComponent {
 
-  constructor(private dialog: MatDialog) { }
+  boxFilledArrayLeft;
+  boxFilledArrayRight;
 
-  maxPoints = 0;
+  //between 1 and 9
+  @Input('boxAmount') boxAmount = 1;
 
-  @ViewChild('boxDialog', { read: TemplateRef, static: true }) boxDialog: TemplateRef<any>;
-
-  ngOnInit() {
-    this.dialog.open(this.boxDialog);
+  ngOnInit(): void {
+    console.log(this.boxAmount);
+    this.initBoxArray();
   }
 
-  loadBoxes(amount: string) {
-    console.log('start Quiz');
-    this.maxPoints = parseInt(amount);
+  initBoxArray(): void {
+    this.boxFilledArrayLeft = new Array();
+    this.boxFilledArrayRight = new Array();
+    for (let i = 0; i < this.boxAmount; i++) {
+      this.boxFilledArrayLeft.push(false);
+      this.boxFilledArrayRight.push(false);
+    }
+    //console.log(this.boxFilledArrayLeft);
+  }
+
+  switchBoxState(side: string, index: number): void {
+
+    if (side == 'left') {
+      if (this.boxFilledArrayLeft[index]) {
+        this.boxFilledArrayLeft[index] = false;
+      } else {
+        this.boxFilledArrayLeft[index] = true;
+      }
+    } else {
+      if (this.boxFilledArrayRight[index]) {
+        this.boxFilledArrayRight[index] = false;
+      } else {
+        this.boxFilledArrayRight[index] = true;
+      }
+    }
+
   }
 }

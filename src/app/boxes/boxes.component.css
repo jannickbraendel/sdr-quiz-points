@@ -10,6 +10,7 @@
     border-style: solid;
     border-color: black;
     border-width: 2px;
+    z-index: 1;
 }
 
 /* Control the left side */
@@ -17,23 +18,51 @@
     left: 0;
     background-color: rgb(61, 61, 220) !important;
     border-right-width: 4px;
+    z-index: 1;
 }
 
 /* Control the right side */
 .right {
     right: 0;
-    background-color: rgb(222, 19, 19) !important;
+    background-color: rgb(151, 11, 11) !important;
     border-left-width: 4px;
+    z-index: 1;
 }
 
 .centered {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 30%;
+    transform: translate(-30%, -50%);
     text-align: center;
+    z-index: 2;
 }
 
-#boxDialog {
-    position: absolute;
+.boxButtonLeft {
+    max-width: 15%;
+    max-height: 15%;
+    background-color: rgb(61, 61, 220);
+    margin-left: 12px;
+    margin-top: 8px;
+    border: 0cm;
+}
+
+.boxButtonRight {
+    max-width: 15%;
+    max-height: 15%;
+    background-color: rgb(151, 11, 11);
+    margin-left: 12px;
+    margin-top: 8px;
+    border: 0cm;
+}
+
+#box-image-empty {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#box-image-full {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: gold
 }

@@ -1,24 +1,26 @@
-<div>
-    <div class="split left">
-
+<div class="split left">
+    <div class="centered">
+        <ng-container *ngFor="let box of this.boxFilledArrayLeft; index as i">
+            <button class="boxButtonLeft" (click)="switchBoxState('left', i)">
+                <ng-container *ngIf="this.boxFilledArrayLeft[i] then boxFull else boxEmpty"></ng-container>
+            </button>
+        </ng-container>
     </div>
-
-    <div class="split right">
-
+</div>
+<div class="split right">
+    <div class="centered">
+        <ng-container *ngFor="let box of this.boxFilledArrayRight; index as i">
+            <button class="boxButtonRight" (click)="switchBoxState('right', i)">
+                <ng-container *ngIf="this.boxFilledArrayRight[i] then boxFull else boxEmpty"></ng-container>
+            </button>
+        </ng-container>
     </div>
 </div>
 
-<ng-template #boxDialog>
-    <h2>Punktzahl</h2>
-    <mat-dialog-content>
-        <label>Höchstpunktzahl zum Gewinnen des Quizzes:</label>
-        <mat-form-field formControlName="numberForm">
-            <mat-label>Zahl eingeben</mat-label>
-            <input #input matInput placeholder="0">
-        </mat-form-field>
-    </mat-dialog-content>
-    <mat-dialog-actions align="center">
-        <button type="submit" (click)="loadBoxes(input.value)" mat-raised-button matDialogClose
-            color="accent">Go!</button>
-    </mat-dialog-actions>
+<ng-template #boxEmpty>
+    <img src="assets/square.png" id="box-image-empty">
+</ng-template>
+
+<ng-template #boxFull>
+    <img src="assets/square.png" id="box-image-full">
 </ng-template>
