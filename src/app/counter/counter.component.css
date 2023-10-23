@@ -44,11 +44,14 @@
     color: black;
     font-size: larger;
     position: absolute;
-    left: 45%;
-    width: 10%;
+    left: 44%;
+    top: 10%;
+    width: 12%;
+    z-index: 2;
 }
 
 #resetButton:hover {
-    background-color: black;
+    background-color: gold;
     color: white;
+    font-weight: bold;
 }

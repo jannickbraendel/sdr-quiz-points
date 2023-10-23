@@ -8,6 +8,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title: "sdr-quiz-points";
 
   constructor(private dialog: MatDialog) { }
 
@@ -20,8 +21,8 @@ export class AppComponent {
   ngOnInit(): void {
     console.log('OnInit!');
     this.dialog.open(this.startDialog, {
-      width: '500px',
-      position: { top: '200px', left: '40%' }
+      width: '600px',
+      position: { top: '10%', left: '33%' }
     });
   }
 

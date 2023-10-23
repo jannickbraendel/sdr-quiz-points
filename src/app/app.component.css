@@ -15,8 +15,11 @@ mat-button-toggle-group {
 .mat-button-toggle {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    font-size: larger;
     color: orange;
     border-style: solid;
+    position: relative;
+    align-items: center;
 }
 
 .mat-button-toggle:hover {
@@ -31,4 +34,10 @@ mat-button-toggle-group {
     border-style: solid;
     border-color: darkorange;
 
+}
+
+#pointsText {
+    margin-top: 15px;
+    color: orange;
+    font-weight: bold;
 }
