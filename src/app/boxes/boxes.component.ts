@@ -7,8 +7,8 @@ import { Component, ViewChild, TemplateRef, OnInit, Input } from '@angular/core'
 })
 export class BoxesComponent {
 
-  boxFilledArrayLeft;
-  boxFilledArrayRight;
+  boxFilledArrayLeft: Array<boolean>;
+  boxFilledArrayRight: Array<boolean>;
 
   //between 1 and 9
   @Input('boxAmount') boxAmount = 1;
@@ -43,6 +43,17 @@ export class BoxesComponent {
         this.boxFilledArrayRight[index] = true;
       }
     }
-
   }
+
+  /*resetBoxes(side: string): void {
+    if (side == 'left') {
+      this.boxFilledArrayLeft.forEach(box => {
+        if (box == true) { box = false; }
+      });
+    } else {
+      this.boxFilledArrayRight.forEach(box => {
+        box = false;
+      });
+    }
+  }*/
 }

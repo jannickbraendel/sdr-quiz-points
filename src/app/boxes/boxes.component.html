@@ -1,4 +1,5 @@
 <div class="split left">
+    <!-- <button class="resetButton" mat-stroked-button (click)="resetBoxes('left')">Reset</button> -->
     <div class="centered">
         <ng-container *ngFor="let box of this.boxFilledArrayLeft; index as i">
             <button class="boxButtonLeft" (click)="switchBoxState('left', i)">

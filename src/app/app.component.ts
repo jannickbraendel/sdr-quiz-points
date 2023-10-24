@@ -1,6 +1,7 @@
 import { Component, ViewChild, TemplateRef, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatButtonToggleModule } from '@angular/material/button-toggle'
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-root',

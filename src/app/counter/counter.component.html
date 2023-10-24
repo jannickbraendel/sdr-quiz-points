@@ -1,18 +1,26 @@
 <div>
-    <button id="resetButton" mat-raised-button (click)="resetScore()">Reset</button>
+    <button id="resetButton" mat-stroked-button (click)="resetScore()">Reset</button>
     <div class="split left">
-        <button (click)="clickLeft()">
-            <div class="centered">
-                <p class="number">{{this.leftCounter}}</p>
-            </div>
+        <button mat-icon-button class="plusButton" (click)="addLeft()">
+            <mat-icon>add_circle</mat-icon>
+        </button>
+        <div class="centered">
+            <p class="number">{{this.leftCounter}}</p>
+        </div>
+        <button mat-icon-button class="minusButton" (click)="subLeft()">
+            <mat-icon>remove_circle</mat-icon>
         </button>
     </div>
 
     <div class="split right">
-        <button (click)="clickRight()">
-            <div class="centered">
-                <p class="number">{{this.rightCounter}}</p>
-            </div>
+        <button mat-icon-button class="plusButton" (click)="addRight()">
+            <mat-icon>add_circle</mat-icon>
+        </button>
+        <div class="centered">
+            <p class="number">{{this.rightCounter}}</p>
+        </div>
+        <button mat-icon-button class="minusButton" (click)="subRight()">
+            <mat-icon>remove_circle</mat-icon>
         </button>
     </div>
 </div>

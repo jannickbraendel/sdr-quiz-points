@@ -35,8 +35,31 @@
 }
 
 .number {
-    font-size: 10cm;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20vw;
     color: white;
+}
+
+.plusButton {
+    z-index: 2;
+    position: absolute;
+    left: 46.5%;
+    top: 25%;
+    text-align: center;
+}
+
+.minusButton {
+    z-index: 2;
+    position: absolute;
+    left: 46.5%;
+    bottom: 23%;
+    text-align: center;
+}
+
+.mat-icon {
+    z-index: 2;
+    color: gold;
+    transform: scale(4);
 }
 
 #resetButton {
@@ -52,6 +75,5 @@
 
 #resetButton:hover {
     background-color: gold;
-    color: white;
     font-weight: bold;
 }
