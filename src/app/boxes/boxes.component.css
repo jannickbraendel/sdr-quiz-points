@@ -39,8 +39,8 @@
 }
 
 .boxButtonLeft {
-    max-width: 15%;
-    max-height: 15%;
+    max-width: 23%;
+    max-height: 23%;
     background-color: rgb(61, 61, 220);
     margin-left: 12px;
     margin-top: 8px;
@@ -48,8 +48,8 @@
 }
 
 .boxButtonRight {
-    max-width: 15%;
-    max-height: 15%;
+    max-width: 23%;
+    max-height: 23%;
     background-color: rgb(227, 15, 15);
     margin-left: 12px;
     margin-top: 8px;
