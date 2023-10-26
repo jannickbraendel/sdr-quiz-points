@@ -23,7 +23,7 @@ export class AppComponent {
     console.log('OnInit!');
     this.dialog.open(this.startDialog, {
       width: '600px',
-      position: { top: '10%', left: '33%' }
+      position: { top: '10%', left: '25%' }
     });
   }
 
