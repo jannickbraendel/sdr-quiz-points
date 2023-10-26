@@ -36,30 +36,32 @@
 
 .number {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20vw;
+    font-size: 20em;
     color: white;
 }
 
 .plusButton {
     z-index: 2;
     position: absolute;
-    left: 46.5%;
-    top: 25%;
-    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 22%;
+
 }
 
 .minusButton {
     z-index: 2;
     position: absolute;
-    left: 46.5%;
-    bottom: 23%;
-    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20%;
 }
+
 
 .mat-icon {
     z-index: 2;
     color: gold;
-    transform: scale(4);
+    transform: scale(3);
 }
 
 #resetButton {
